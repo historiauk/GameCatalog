@@ -27,10 +27,11 @@
 
 ```
 GameCatalog/
-├─ Models/      доменні класи: Game, IRateable, CollectionItem, DigitalCopy, PhysicalCopy,
-│               SubscriptionCopy, UserCollection, PlatformStat, CollectionStatistics, DuplicateGameException
-├─ Services/    JsonStorage, XmlExporter, CatalogFilter, StatisticsService, ImportService, CatalogGenerator
-├─ ViewModels/  MainViewModel, ChartBar
+├─ Models/      Game, IRateable, CollectionItem, DigitalCopy, PhysicalCopy, SubscriptionCopy,
+│               UserCollection, DuplicateGameException, CatalogOptions, PlatformStat, CollectionStatistics
+├─ Services/    JsonStorage, XmlExporter, CatalogFilter, DashboardService, StatisticsService,
+│               ImportService, ImportResult, CatalogGenerator
+├─ ViewModels/  MainViewModel (MainViewModel.cs + MainViewModel.Crud.cs), ChartBar
 ├─ Views/       MainWindow.axaml
 └─ Data/        games.json (52 гри), broken.json (пошкоджений файл для тестування)
 ```
@@ -53,5 +54,8 @@ dotnet publish GameCatalog -c Release -r win-x64 --self-contained true -p:Publis
 
 ## Використання ШІ
 
-Під час роботи використовувався ШІ-асистент Claude Opus 5.5 (Anthropic). Фрагменти коду, отримані від ШІ,
-позначені коментарем `// ШІ: ...`; повний журнал – у файлі `AI_LOG.md`.
+Під час роботи використовувався ШІ-асистент Claude Opus 5.5 (Anthropic): пояснення, приклади-аналоги,
+текстові специфікації, перевірка коду. Згенерований ШІ код позначено коментарем `// ШІ: ...` перед фрагментом
+(розмітка вікна, частина MainViewModel, ChartBar, атрибути JSON і властивості TypeName/Value у копіях).
+Класи моделей і сервіси написані авторкою (частина моделей – за прикладами-аналогами, це також позначено).
+Цей README і чернетки розділів DESIGN.md підготовлено з допомогою ШІ. Повний журнал – у файлі `AI_LOG.md`.
