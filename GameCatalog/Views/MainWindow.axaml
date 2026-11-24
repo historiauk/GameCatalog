@@ -1,0 +1,498 @@
+<!-- ШІ: Claude Opus 5.5 (Medium) – розмітка і неонове оформлення головного вікна. Змінено: без змін -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GameCatalog.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="820"
+        x:Class="GameCatalog.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        x:CompileBindings="False"
+        Icon="/Assets/avalonia-logo.ico"
+        Width="1300" Height="820" MinWidth="1100" MinHeight="680"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI Variable Text, Segoe UI, Inter"
+        FontSize="14"
+        Foreground="#E8E8FF"
+        Title="Каталог відеоігор з колекцією користувача">
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+            <GradientStop Color="#0A0A1F" Offset="0"/>
+            <GradientStop Color="#160B2E" Offset="0.6"/>
+            <GradientStop Color="#0B1A2E" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <Window.Styles>
+        <!-- Заголовки: шрифт Bahnschrift -->
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontFamily" Value="Bahnschrift, Segoe UI"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="TextBlock.h2">
+            <Setter Property="FontFamily" Value="Bahnschrift, Segoe UI"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+        <Style Selector="TextBlock.muted">
+            <Setter Property="Foreground" Value="#9A9AC0"/>
+        </Style>
+        <Style Selector="TextBlock.label">
+            <Setter Property="Foreground" Value="#B8B8E0"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,8,0,3"/>
+        </Style>
+        <Style Selector="TextBlock.bigNumber">
+            <Setter Property="FontFamily" Value="Bahnschrift, Segoe UI"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <!-- Картка -->
+        <Style Selector="Border.card">
+            <Setter Property="Background" Value="#CC15152E"/>
+            <Setter Property="BorderBrush" Value="#2E2E55"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="BoxShadow" Value="0 10 30 0 #55000000"/>
+        </Style>
+
+        <!-- Неонові картки-лічильники зі світінням -->
+        <Style Selector="Border.stat">
+            <Setter Property="Background" Value="#CC15152E"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Padding" Value="18,14"/>
+            <Setter Property="Margin" Value="0,0,14,0"/>
+        </Style>
+        <Style Selector="Border.cyan">
+            <Setter Property="BorderBrush" Value="#00F5FF"/>
+            <Setter Property="BoxShadow" Value="0 0 22 0 #5500F5FF"/>
+        </Style>
+        <Style Selector="Border.pink">
+            <Setter Property="BorderBrush" Value="#FF2BD6"/>
+            <Setter Property="BoxShadow" Value="0 0 22 0 #55FF2BD6"/>
+        </Style>
+        <Style Selector="Border.lime">
+            <Setter Property="BorderBrush" Value="#A3FF12"/>
+            <Setter Property="BoxShadow" Value="0 0 22 0 #55A3FF12"/>
+        </Style>
+        <Style Selector="Border.purple">
+            <Setter Property="BorderBrush" Value="#8B5CF6"/>
+            <Setter Property="BoxShadow" Value="0 0 22 0 #668B5CF6"/>
+        </Style>
+
+        <!-- Кнопки -->
+        <Style Selector="Button">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="14,8"/>
+            <Setter Property="Margin" Value="0,0,6,6"/>
+        </Style>
+        <Style Selector="Button.neon">
+            <Setter Property="Background" Value="#8B5CF6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+        <Style Selector="Button.neon:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#A78BFA"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.danger">
+            <Setter Property="Background" Value="#E11D48"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.danger:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#F43F5E"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Бокове меню -->
+        <Style Selector="ListBox.nav">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style Selector="ListBox.nav ListBoxItem">
+            <Setter Property="Padding" Value="16,12"/>
+            <Setter Property="Margin" Value="0,3"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#B8B8E0"/>
+        </Style>
+        <Style Selector="ListBox.nav ListBoxItem:selected /template/ ContentPresenter">
+            <Setter Property="Background" Value="#2600F5FF"/>
+        </Style>
+        <Style Selector="ListBox.nav ListBoxItem:selected">
+            <Setter Property="Foreground" Value="#00F5FF"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <!-- Таблиці -->
+        <Style Selector="DataGrid">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid ColumnDefinitions="230,*">
+
+        <!-- ================= Бокове меню ================= -->
+        <Border Background="#99101026" BorderBrush="#2E2E55" BorderThickness="0,0,1,0" Padding="18,24">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Margin="6,0,0,26">
+                    <TextBlock Text="GAME" FontFamily="Bahnschrift, Segoe UI" FontSize="26" FontWeight="Bold" Foreground="#00F5FF"/>
+                    <TextBlock Text="CATALOG" FontFamily="Bahnschrift, Segoe UI" FontSize="26" FontWeight="Bold" Foreground="#FF2BD6" Margin="0,-8,0,0"/>
+                    <TextBlock Text="твоя колекція ігор" Classes="muted" FontSize="12"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Bottom" Spacing="6">
+                    <TextBlock Text="Файл JSON" Classes="label"/>
+                    <TextBox Text="{Binding FilePath}" FontSize="11"/>
+                    <Button Content="Завантажити" Command="{Binding LoadCommand}" HorizontalAlignment="Stretch"/>
+                    <Button Classes="neon" Content="Зберегти" Command="{Binding SaveCommand}" HorizontalAlignment="Stretch"/>
+                </StackPanel>
+
+                <ListBox Classes="nav" ItemsSource="{Binding NavItems}" SelectedIndex="{Binding PageIndex, Mode=TwoWay}"/>
+            </DockPanel>
+        </Border>
+
+        <!-- ================= Вміст ================= -->
+        <DockPanel Grid.Column="1" Margin="26,22,26,18">
+
+            <!-- Повідомлення внизу -->
+            <Border DockPanel.Dock="Bottom" Classes="card" Padding="14,10" Margin="0,14,0,0">
+                <StackPanel>
+                    <TextBlock Text="{Binding StatusMessage}" Classes="muted" TextWrapping="Wrap"/>
+                    <TextBlock Text="{Binding ErrorMessage}" Foreground="#FF4D6D" FontWeight="SemiBold" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <Panel>
+
+                <!-- ================= Сторінка «Огляд» ================= -->
+                <ScrollViewer IsVisible="{Binding IsOverviewPage}">
+                    <StackPanel Spacing="18" Margin="4,4,12,8">
+                        <StackPanel>
+                            <TextBlock Classes="h1" Text="Привіт, геймере!"/>
+                            <TextBlock Classes="muted" Text="Ось як виглядає твоя колекція зараз"/>
+                        </StackPanel>
+
+                        <!-- Картки-лічильники -->
+                        <UniformGrid Columns="4">
+                            <Border Classes="stat cyan">
+                                <StackPanel>
+                                    <TextBlock Classes="muted" Text="Ігор у каталозі"/>
+                                    <TextBlock Classes="bigNumber" Text="{Binding TotalGames}" Foreground="#00F5FF"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Classes="stat pink">
+                                <StackPanel>
+                                    <TextBlock Classes="muted" Text="Копій у колекції"/>
+                                    <TextBlock Classes="bigNumber" Text="{Binding TotalItems}" Foreground="#FF2BD6"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Classes="stat lime">
+                                <StackPanel>
+                                    <TextBlock Classes="muted" Text="Пройдено"/>
+                                    <TextBlock Classes="bigNumber" Text="{Binding CompletedCount}" Foreground="#A3FF12"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Classes="stat purple" Margin="0">
+                                <StackPanel>
+                                    <TextBlock Classes="muted" Text="Вартість колекції"/>
+                                    <TextBlock Classes="bigNumber" Text="{Binding TotalValueText}" Foreground="#B79CFF"/>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+
+                        <!-- Діаграма платформ + кільце "пройдено" -->
+                        <Grid ColumnDefinitions="*,300">
+                            <Border Classes="card">
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Копії за платформами"/>
+                                    <ItemsControl ItemsSource="{Binding PlatformBars}" Height="215">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" Spacing="14" VerticalAlignment="Bottom"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Width="96" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="{Binding ValueText}" HorizontalAlignment="Center"
+                                                               FontWeight="Bold" Foreground="{Binding Brush}"/>
+                                                    <Border Width="38" Height="{Binding Size}" CornerRadius="10,10,4,4"
+                                                            Background="{Binding Brush}" Margin="0,4,0,6"/>
+                                                    <TextBlock Text="{Binding Label}" HorizontalAlignment="Center" TextAlignment="Center"
+                                                               TextWrapping="Wrap" FontSize="12" Classes="muted"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Grid.Column="1" Classes="card" Margin="14,0,0,0">
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Прогрес проходження"/>
+                                    <Grid Width="170" Height="170" Margin="0,6,0,0">
+                                        <Arc Stroke="#2A2A50" StrokeThickness="18" StartAngle="0" SweepAngle="359.9"/>
+                                        <Arc Stroke="#FF2BD6" StrokeThickness="18" StrokeLineCap="Round"
+                                             StartAngle="-90" SweepAngle="{Binding CompletedSweep}"/>
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="{Binding CompletedPercentText}" Classes="bigNumber"
+                                                       Foreground="White" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="пройдено" Classes="muted" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <!-- Статуси + жанри -->
+                        <Grid ColumnDefinitions="*,*">
+                            <Border Classes="card">
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Статуси проходження"/>
+                                    <ItemsControl ItemsSource="{Binding StatusBars}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid ColumnDefinitions="110,*,40" Margin="0,5">
+                                                    <TextBlock Text="{Binding Label}" Classes="muted" VerticalAlignment="Center"/>
+                                                    <Border Grid.Column="1" Width="{Binding Size}" Height="12" CornerRadius="6"
+                                                            HorizontalAlignment="Left" Background="{Binding Brush}"/>
+                                                    <TextBlock Grid.Column="2" Text="{Binding ValueText}" FontWeight="Bold"
+                                                               HorizontalAlignment="Right"/>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="1" Classes="card" Margin="14,0,0,0">
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Топ жанрів"/>
+                                    <ItemsControl ItemsSource="{Binding GenreBars}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid ColumnDefinitions="110,*,40" Margin="0,5">
+                                                    <TextBlock Text="{Binding Label}" Classes="muted" VerticalAlignment="Center"/>
+                                                    <Border Grid.Column="1" Width="{Binding Size}" Height="12" CornerRadius="6"
+                                                            HorizontalAlignment="Left" Background="{Binding Brush}"/>
+                                                    <TextBlock Grid.Column="2" Text="{Binding ValueText}" FontWeight="Bold"
+                                                               HorizontalAlignment="Right"/>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- ================= Сторінка «Каталог ігор» ================= -->
+                <DockPanel IsVisible="{Binding IsCatalogPage}">
+                    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,16">
+                        <TextBlock Classes="h1" Text="Каталог ігор"/>
+                        <TextBlock Classes="muted" Text="Усі ігри: додавай, змінюй, видаляй. Клік по заголовку стовпця сортує таблицю"/>
+                    </StackPanel>
+                    <Border DockPanel.Dock="Top" Classes="card" Padding="14,10" Margin="0,0,0,14">
+                        <Grid ColumnDefinitions="Auto,*,Auto,220">
+                            <TextBlock Text="Пошук:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                            <TextBox Grid.Column="1" Text="{Binding SearchText}" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Text="Жанр:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="18,0,10,0"/>
+                            <ComboBox Grid.Column="3" ItemsSource="{Binding GenreOptions}"
+                                      SelectedItem="{Binding SelectedGenre, Mode=TwoWay}" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                    </Border>
+                    <Grid ColumnDefinitions="*,320">
+                        <Border Classes="card" Padding="6" ClipToBounds="True">
+                            <DataGrid ItemsSource="{Binding Games}"
+                                      SelectedItem="{Binding SelectedGame, Mode=TwoWay}"
+                                      AutoGenerateColumns="False" IsReadOnly="True" CanUserSortColumns="True"
+                                      GridLinesVisibility="Horizontal">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Назва" Binding="{Binding Title}" Width="*"/>
+                                    <DataGridTextColumn Header="Жанр" Binding="{Binding Genre}" Width="130"/>
+                                    <DataGridTextColumn Header="Рік" Binding="{Binding Year}" Width="80"/>
+                                    <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}" Width="95"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+
+                        <Border Grid.Column="1" Classes="card" Margin="14,0,0,0">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Гра"/>
+                                    <TextBlock Classes="label" Text="Назва *"/>
+                                    <TextBox Text="{Binding GameTitle}"/>
+                                    <TextBlock Classes="label" Text="Жанр"/>
+                                    <TextBox Text="{Binding GameGenre}"/>
+                                    <TextBlock Classes="label" Text="Рік (від 1970)"/>
+                                    <NumericUpDown Value="{Binding GameYear}" Minimum="0" Maximum="3000" Increment="1" FormatString="0"/>
+                                    <TextBlock Classes="label" Text="Рейтинг (1–10)"/>
+                                    <NumericUpDown Value="{Binding GameRating}" Minimum="-100" Maximum="100" Increment="1" FormatString="0"/>
+                                    <WrapPanel Margin="0,16,0,0">
+                                        <Button Content="Нова" Command="{Binding NewGameCommand}"/>
+                                        <Button Classes="neon" Content="Додати" Command="{Binding AddGameCommand}"/>
+                                        <Button Classes="neon" Content="Зберегти зміни" Command="{Binding SaveGameCommand}"/>
+                                        <Button Classes="danger" Content="Видалити" Command="{Binding DeleteGameCommand}"/>
+                                    </WrapPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </DockPanel>
+
+                <!-- ================= Сторінка «Моя колекція» ================= -->
+                <DockPanel IsVisible="{Binding IsCollectionPage}">
+                    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,16">
+                        <TextBlock Classes="h1" Text="Моя колекція"/>
+                        <TextBlock Classes="muted" Text="Твої копії ігор: платформа, тип копії, ціна і статус проходження"/>
+                    </StackPanel>
+                    <Border DockPanel.Dock="Top" Classes="card" Padding="14,10" Margin="0,0,0,14">
+                        <Grid ColumnDefinitions="Auto,*,Auto,190,Auto,160">
+                            <TextBlock Text="Пошук:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                            <TextBox Grid.Column="1" Text="{Binding SearchText}" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Text="Платформа:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="18,0,10,0"/>
+                            <ComboBox Grid.Column="3" ItemsSource="{Binding PlatformOptions}"
+                                      SelectedItem="{Binding SelectedPlatform, Mode=TwoWay}" HorizontalAlignment="Stretch"/>
+                            <TextBlock Grid.Column="4" Text="Статус:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="18,0,10,0"/>
+                            <ComboBox Grid.Column="5" ItemsSource="{Binding StatusOptions}"
+                                      SelectedItem="{Binding SelectedStatus, Mode=TwoWay}" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                    </Border>
+                    <Grid ColumnDefinitions="*,320">
+                        <Border Classes="card" Padding="6" ClipToBounds="True">
+                            <DataGrid ItemsSource="{Binding Items}"
+                                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                      AutoGenerateColumns="False" IsReadOnly="True" CanUserSortColumns="True"
+                                      GridLinesVisibility="Horizontal">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Гра" Binding="{Binding GameTitle}" Width="*"/>
+                                    <DataGridTextColumn Header="Платформа" Binding="{Binding Platform}" Width="140"/>
+                                    <DataGridTextColumn Header="Тип копії" Binding="{Binding TypeName}" Width="100"/>
+                                    <DataGridTextColumn Header="Ціна" Binding="{Binding Price, StringFormat={}{0:F2}}" Width="90"/>
+                                    <DataGridTextColumn Header="Вартість" Binding="{Binding Value, StringFormat={}{0:F2}}" Width="95"/>
+                                    <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="105"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+
+                        <Border Grid.Column="1" Classes="card" Margin="14,0,0,0">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Classes="h2" Text="Копія гри"/>
+                                    <TextBlock Classes="label" Text="Гра (з каталогу) *"/>
+                                    <AutoCompleteBox ItemsSource="{Binding GameTitles}" Text="{Binding ItemGameTitle, Mode=TwoWay}"
+                                                     FilterMode="Contains" MinimumPrefixLength="1"/>
+                                    <TextBlock Classes="label" Text="Платформа *"/>
+                                    <ComboBox ItemsSource="{Binding PlatformList}" SelectedItem="{Binding ItemPlatform, Mode=TwoWay}"
+                                              HorizontalAlignment="Stretch"/>
+                                    <TextBlock Classes="label" Text="Тип копії"/>
+                                    <ComboBox ItemsSource="{Binding CopyTypeList}" SelectedItem="{Binding ItemCopyType, Mode=TwoWay}"
+                                              HorizontalAlignment="Stretch"/>
+                                    <CheckBox Content="Запакована (вартість × 1,5)" IsChecked="{Binding ItemIsSealed}"
+                                              IsVisible="{Binding IsPhysical}" Margin="0,8,0,0"/>
+                                    <TextBlock Classes="label" Text="Ціна, грн (для підписки – за місяць)"/>
+                                    <NumericUpDown Value="{Binding ItemPrice}" Minimum="-100000" Maximum="1000000"
+                                                   Increment="10" FormatString="0.00"/>
+                                    <TextBlock Classes="label" Text="Статус проходження"/>
+                                    <ComboBox ItemsSource="{Binding StatusList}" SelectedItem="{Binding ItemStatus, Mode=TwoWay}"
+                                              HorizontalAlignment="Stretch"/>
+                                    <WrapPanel Margin="0,16,0,0">
+                                        <Button Content="Нова" Command="{Binding NewItemCommand}"/>
+                                        <Button Classes="neon" Content="Додати" Command="{Binding AddItemCommand}"/>
+                                        <Button Classes="neon" Content="Зберегти зміни" Command="{Binding SaveItemCommand}"/>
+                                        <Button Classes="danger" Content="Видалити" Command="{Binding DeleteItemCommand}"/>
+                                    </WrapPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </DockPanel>
+                <!-- ================= Сторінка «Імпорт і статистика» ================= -->
+                <ScrollViewer IsVisible="{Binding IsImportPage}">
+                    <StackPanel Spacing="16" Margin="4,4,12,8">
+                        <StackPanel>
+                            <TextBlock Classes="h1" Text="Імпорт і статистика"/>
+                            <TextBlock Classes="muted" Text="Великий каталог обробляється у фоновому потоці – вікно не зависає"/>
+                        </StackPanel>
+
+                        <Border Classes="card">
+                            <StackPanel Spacing="8">
+                                <TextBlock Classes="h2" Text="Фоновий імпорт"/>
+                                <Grid ColumnDefinitions="Auto,*">
+                                    <TextBlock Text="Файл:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                    <TextBox Grid.Column="1" Text="{Binding ImportPath}"/>
+                                </Grid>
+                                <WrapPanel Margin="0,6,0,0">
+                                    <Button Content="Згенерувати каталог 10 000" Command="{Binding GenerateCatalogCommand}"
+                                            IsEnabled="{Binding IsNotBusy}"/>
+                                    <Button Classes="neon" Content="Імпортувати" Command="{Binding ImportCommand}"
+                                            IsEnabled="{Binding IsNotBusy}"/>
+                                    <Button Classes="danger" Content="Скасувати" Command="{Binding CancelCommand}"
+                                            IsEnabled="{Binding IsBusy}"/>
+                                    <CheckBox Content="Повільний режим (для демонстрації прогресу)" IsChecked="{Binding SlowMode}"
+                                              VerticalAlignment="Center" Margin="10,0,0,6"/>
+                                </WrapPanel>
+                                <Grid ColumnDefinitions="*,60">
+                                    <ProgressBar Value="{Binding ProgressValue}" Minimum="0" Maximum="100" Height="14"
+                                                 CornerRadius="7" Foreground="#00F5FF" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding ProgressText}" FontWeight="Bold"
+                                               Foreground="#00F5FF" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                </Grid>
+                                <TextBlock Text="{Binding ImportResultText}" TextWrapping="Wrap" Foreground="#A3FF12"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Classes="card">
+                            <StackPanel Spacing="8">
+                                <TextBlock Classes="h2" Text="Паралельна статистика за платформами"/>
+                                <WrapPanel>
+                                    <TextBlock Text="Кількість задач (потоків):" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,6"/>
+                                    <NumericUpDown Value="{Binding TaskCount}" Minimum="1" Maximum="64" Increment="1"
+                                                   FormatString="0" Width="130" Margin="0,0,14,6"/>
+                                    <Button Classes="neon" Content="Розрахувати" Command="{Binding CalculateStatisticsCommand}"
+                                            IsEnabled="{Binding IsNotBusy}"/>
+                                    <Button Classes="neon" Content="Порівняти 1 і N потоків" Command="{Binding CompareCommand}"
+                                            IsEnabled="{Binding IsNotBusy}"/>
+                                    <Button Content="Експорт у XML" Command="{Binding ExportXmlCommand}"
+                                            IsEnabled="{Binding IsNotBusy}"/>
+                                </WrapPanel>
+                                <TextBlock Text="{Binding BenchmarkText}" FontFamily="Consolas, Cascadia Mono, monospace"
+                                           Foreground="#00F5FF" FontSize="15"/>
+                                <DataGrid ItemsSource="{Binding Statistics}" AutoGenerateColumns="False" IsReadOnly="True"
+                                          GridLinesVisibility="Horizontal" Height="220">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Платформа" Binding="{Binding Platform}" Width="*"/>
+                                        <DataGridTextColumn Header="Копій" Binding="{Binding ItemCount}" Width="100"/>
+                                        <DataGridTextColumn Header="Пройдено" Binding="{Binding CompletedCount}" Width="110"/>
+                                        <DataGridTextColumn Header="Сума цін" Binding="{Binding TotalPrice, StringFormat={}{0:N2}}" Width="150"/>
+                                        <DataGridTextColumn Header="Вартість" Binding="{Binding TotalValue, StringFormat={}{0:N2}}" Width="150"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Classes="card">
+                            <StackPanel>
+                                <TextBlock Classes="h2" Text="Журнал фонових операцій"/>
+                                <ListBox ItemsSource="{Binding OperationLog}" Height="170" Background="Transparent"
+                                         FontFamily="Consolas, Cascadia Mono, monospace" FontSize="12"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </Panel>
+        </DockPanel>
+    </Grid>
+</Window>

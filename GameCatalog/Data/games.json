@@ -1,0 +1,728 @@
+{
+  "games": [
+    {
+      "title": "The Witcher 3: Wild Hunt",
+      "genre": "RPG",
+      "year": 2015,
+      "rating": 10
+    },
+    {
+      "title": "Cyberpunk 2077",
+      "genre": "RPG",
+      "year": 2020,
+      "rating": 8
+    },
+    {
+      "title": "Elden Ring",
+      "genre": "RPG",
+      "year": 2022,
+      "rating": 10
+    },
+    {
+      "title": "Baldur's Gate 3",
+      "genre": "RPG",
+      "year": 2023,
+      "rating": 10
+    },
+    {
+      "title": "The Elder Scrolls V: Skyrim",
+      "genre": "RPG",
+      "year": 2011,
+      "rating": 9
+    },
+    {
+      "title": "Mass Effect 2",
+      "genre": "RPG",
+      "year": 2010,
+      "rating": 9
+    },
+    {
+      "title": "Fallout: New Vegas",
+      "genre": "RPG",
+      "year": 2010,
+      "rating": 9
+    },
+    {
+      "title": "Disco Elysium",
+      "genre": "RPG",
+      "year": 2019,
+      "rating": 9
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "genre": "Пригоди",
+      "year": 2018,
+      "rating": 10
+    },
+    {
+      "title": "Grand Theft Auto V",
+      "genre": "Екшн",
+      "year": 2013,
+      "rating": 9
+    },
+    {
+      "title": "God of War",
+      "genre": "Екшн",
+      "year": 2018,
+      "rating": 9
+    },
+    {
+      "title": "Sekiro: Shadows Die Twice",
+      "genre": "Екшн",
+      "year": 2019,
+      "rating": 9
+    },
+    {
+      "title": "Hollow Knight",
+      "genre": "Платформер",
+      "year": 2017,
+      "rating": 9
+    },
+    {
+      "title": "Celeste",
+      "genre": "Платформер",
+      "year": 2018,
+      "rating": 9
+    },
+    {
+      "title": "Super Mario Odyssey",
+      "genre": "Платформер",
+      "year": 2017,
+      "rating": 9
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "genre": "Пригоди",
+      "year": 2017,
+      "rating": 10
+    },
+    {
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "genre": "Пригоди",
+      "year": 2023,
+      "rating": 10
+    },
+    {
+      "title": "Portal 2",
+      "genre": "Головоломка",
+      "year": 2011,
+      "rating": 10
+    },
+    {
+      "title": "The Witness",
+      "genre": "Головоломка",
+      "year": 2016,
+      "rating": 8
+    },
+    {
+      "title": "Tetris Effect",
+      "genre": "Головоломка",
+      "year": 2018,
+      "rating": 8
+    },
+    {
+      "title": "Half-Life 2",
+      "genre": "Шутер",
+      "year": 2004,
+      "rating": 10
+    },
+    {
+      "title": "DOOM Eternal",
+      "genre": "Шутер",
+      "year": 2020,
+      "rating": 9
+    },
+    {
+      "title": "Counter-Strike 2",
+      "genre": "Шутер",
+      "year": 2023,
+      "rating": 8
+    },
+    {
+      "title": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+      "genre": "Шутер",
+      "year": 2007,
+      "rating": 9
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "genre": "Шутер",
+      "year": 2024,
+      "rating": 8
+    },
+    {
+      "title": "Metro Exodus",
+      "genre": "Шутер",
+      "year": 2019,
+      "rating": 8
+    },
+    {
+      "title": "BioShock",
+      "genre": "Шутер",
+      "year": 2007,
+      "rating": 9
+    },
+    {
+      "title": "Sid Meier's Civilization VI",
+      "genre": "Стратегія",
+      "year": 2016,
+      "rating": 8
+    },
+    {
+      "title": "StarCraft II: Wings of Liberty",
+      "genre": "Стратегія",
+      "year": 2010,
+      "rating": 9
+    },
+    {
+      "title": "XCOM 2",
+      "genre": "Стратегія",
+      "year": 2016,
+      "rating": 8
+    },
+    {
+      "title": "Age of Empires II: Definitive Edition",
+      "genre": "Стратегія",
+      "year": 2019,
+      "rating": 9
+    },
+    {
+      "title": "Cossacks 3",
+      "genre": "Стратегія",
+      "year": 2016,
+      "rating": 6
+    },
+    {
+      "title": "Forza Horizon 5",
+      "genre": "Гонки",
+      "year": 2021,
+      "rating": 9
+    },
+    {
+      "title": "Gran Turismo 7",
+      "genre": "Гонки",
+      "year": 2022,
+      "rating": 8
+    },
+    {
+      "title": "Need for Speed: Most Wanted",
+      "genre": "Гонки",
+      "year": 2005,
+      "rating": 8
+    },
+    {
+      "title": "EA Sports FC 24",
+      "genre": "Спорт",
+      "year": 2023,
+      "rating": 6
+    },
+    {
+      "title": "NBA 2K24",
+      "genre": "Спорт",
+      "year": 2023,
+      "rating": 6
+    },
+    {
+      "title": "Stardew Valley",
+      "genre": "Симулятор",
+      "year": 2016,
+      "rating": 9
+    },
+    {
+      "title": "The Sims 4",
+      "genre": "Симулятор",
+      "year": 2014,
+      "rating": 7
+    },
+    {
+      "title": "Microsoft Flight Simulator",
+      "genre": "Симулятор",
+      "year": 2020,
+      "rating": 8
+    },
+    {
+      "title": "Euro Truck Simulator 2",
+      "genre": "Симулятор",
+      "year": 2012,
+      "rating": 8
+    },
+    {
+      "title": "Resident Evil 4",
+      "genre": "Хорор",
+      "year": 2023,
+      "rating": 9
+    },
+    {
+      "title": "Silent Hill 2",
+      "genre": "Хорор",
+      "year": 2001,
+      "rating": 9
+    },
+    {
+      "title": "Dead Space",
+      "genre": "Хорор",
+      "year": 2008,
+      "rating": 9
+    },
+    {
+      "title": "Mortal Kombat 1",
+      "genre": "Файтинг",
+      "year": 2023,
+      "rating": 7
+    },
+    {
+      "title": "Street Fighter 6",
+      "genre": "Файтинг",
+      "year": 2023,
+      "rating": 8
+    },
+    {
+      "title": "Tekken 8",
+      "genre": "Файтинг",
+      "year": 2024,
+      "rating": 8
+    },
+    {
+      "title": "Hades",
+      "genre": "Інді",
+      "year": 2020,
+      "rating": 9
+    },
+    {
+      "title": "Undertale",
+      "genre": "Інді",
+      "year": 2015,
+      "rating": 9
+    },
+    {
+      "title": "Minecraft",
+      "genre": "Пригоди",
+      "year": 2011,
+      "rating": 10
+    },
+    {
+      "title": "Terraria",
+      "genre": "Пригоди",
+      "year": 2011,
+      "rating": 9
+    },
+    {
+      "title": "Among Us",
+      "genre": "Інді",
+      "year": 2018,
+      "rating": 7
+    }
+  ],
+  "items": [
+    {
+      "copyType": "digital",
+      "gameTitle": "The Witcher 3: Wild Hunt",
+      "platform": "PC",
+      "price": 999,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Cyberpunk 2077",
+      "platform": "Xbox Series X|S",
+      "price": 799,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Elden Ring",
+      "platform": "PC",
+      "price": 299,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Baldur's Gate 3",
+      "platform": "PC",
+      "price": 1499,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "The Elder Scrolls V: Skyrim",
+      "platform": "Xbox Series X|S",
+      "price": 499,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Mass Effect 2",
+      "platform": "PlayStation 5",
+      "price": 499,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Fallout: New Vegas",
+      "platform": "PC",
+      "price": 999,
+      "status": "Граю",
+      "isSealed": false
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Disco Elysium",
+      "platform": "Xbox Series X|S",
+      "price": 1499,
+      "status": "Граю",
+      "isSealed": true
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Red Dead Redemption 2",
+      "platform": "Xbox Series X|S",
+      "price": 799,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Grand Theft Auto V",
+      "platform": "PC",
+      "price": 1899,
+      "status": "Граю"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "God of War",
+      "platform": "PlayStation 5",
+      "price": 1499,
+      "status": "Закинуто",
+      "isSealed": false
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "Sekiro: Shadows Die Twice",
+      "platform": "PlayStation 5",
+      "price": 449.0,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Hollow Knight",
+      "platform": "PC",
+      "price": 299,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "Celeste",
+      "platform": "PC",
+      "price": 449.0,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Super Mario Odyssey",
+      "platform": "Nintendo Switch",
+      "price": 299,
+      "status": "Не почато",
+      "isSealed": false
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "The Legend of Zelda: Breath of the Wild",
+      "platform": "Nintendo Switch",
+      "price": 399,
+      "status": "Пройдено",
+      "isSealed": true
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "The Legend of Zelda: Tears of the Kingdom",
+      "platform": "Nintendo Switch",
+      "price": 1199,
+      "status": "Закинуто",
+      "isSealed": true
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Portal 2",
+      "platform": "PlayStation 4",
+      "price": 1499,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "The Witness",
+      "platform": "PC",
+      "price": 449.0,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Tetris Effect",
+      "platform": "PC",
+      "price": 1199,
+      "status": "Не почато",
+      "isSealed": true
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Half-Life 2",
+      "platform": "PlayStation 4",
+      "price": 2199,
+      "status": "Закинуто",
+      "isSealed": true
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "DOOM Eternal",
+      "platform": "PlayStation 5",
+      "price": 199,
+      "status": "Закинуто",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Counter-Strike 2",
+      "platform": "Xbox Series X|S",
+      "price": 1199,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+      "platform": "PC",
+      "price": 499,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "platform": "PlayStation 5",
+      "price": 399,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Metro Exodus",
+      "platform": "PC",
+      "price": 999,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "BioShock",
+      "platform": "PC",
+      "price": 449.0,
+      "status": "Граю"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Sid Meier's Civilization VI",
+      "platform": "PC",
+      "price": 499,
+      "status": "Граю"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "StarCraft II: Wings of Liberty",
+      "platform": "Xbox Series X|S",
+      "price": 599,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "XCOM 2",
+      "platform": "PlayStation 5",
+      "price": 1899,
+      "status": "Пройдено",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Age of Empires II: Definitive Edition",
+      "platform": "PlayStation 4",
+      "price": 1199,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Cossacks 3",
+      "platform": "PlayStation 5",
+      "price": 1199,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Forza Horizon 5",
+      "platform": "PC",
+      "price": 1199,
+      "status": "Граю"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Gran Turismo 7",
+      "platform": "PlayStation 5",
+      "price": 1899,
+      "status": "Не почато",
+      "isSealed": true
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Need for Speed: Most Wanted",
+      "platform": "Xbox Series X|S",
+      "price": 1499,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "EA Sports FC 24",
+      "platform": "Xbox Series X|S",
+      "price": 299,
+      "status": "Граю"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "NBA 2K24",
+      "platform": "PC",
+      "price": 799,
+      "status": "Пройдено",
+      "isSealed": false
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "Stardew Valley",
+      "platform": "PC",
+      "price": 449.0,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "The Sims 4",
+      "platform": "PC",
+      "price": 399,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Microsoft Flight Simulator",
+      "platform": "PlayStation 4",
+      "price": 1199,
+      "status": "Граю",
+      "isSealed": false
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Euro Truck Simulator 2",
+      "platform": "PC",
+      "price": 399,
+      "status": "Не почато",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Resident Evil 4",
+      "platform": "PC",
+      "price": 599,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Silent Hill 2",
+      "platform": "PC",
+      "price": 1499,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Dead Space",
+      "platform": "Xbox Series X|S",
+      "price": 499,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Mortal Kombat 1",
+      "platform": "PC",
+      "price": 1499,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Street Fighter 6",
+      "platform": "PC",
+      "price": 599,
+      "status": "Закинуто"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Tekken 8",
+      "platform": "PlayStation 4",
+      "price": 1199,
+      "status": "Пройдено",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Hades",
+      "platform": "PC",
+      "price": 499,
+      "status": "Не почато"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Undertale",
+      "platform": "PC",
+      "price": 499,
+      "status": "Закинуто",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Minecraft",
+      "platform": "Xbox Series X|S",
+      "price": 1199,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Terraria",
+      "platform": "PC",
+      "price": 999,
+      "status": "Граю"
+    },
+    {
+      "copyType": "subscription",
+      "gameTitle": "Among Us",
+      "platform": "PC",
+      "price": 449.0,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "The Witcher 3: Wild Hunt",
+      "platform": "Nintendo Switch",
+      "price": 1299.0,
+      "status": "Граю",
+      "isSealed": true
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Hollow Knight",
+      "platform": "Nintendo Switch",
+      "price": 499.0,
+      "status": "Пройдено"
+    },
+    {
+      "copyType": "physical",
+      "gameTitle": "Minecraft",
+      "platform": "PlayStation 4",
+      "price": 699.0,
+      "status": "Пройдено",
+      "isSealed": false
+    },
+    {
+      "copyType": "digital",
+      "gameTitle": "Stardew Valley",
+      "platform": "Nintendo Switch",
+      "price": 469.0,
+      "status": "Граю"
+    }
+  ]
+}
