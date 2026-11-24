@@ -7,6 +7,9 @@ namespace GameCatalog;
 
 sealed class Program
 {
+    // ШІ: Claude Opus 5.5 (Medium) – відновлено шаблонну обгортку Avalonia (namespace, клас Program, [STAThread],
+    //     BuildAvaloniaApp) і два коментарі до неї; ланцюжок LoggerConfiguration дано готовим.
+    // Змінено: метод Main (журнал Serilog, try/catch/finally) написала студентка.
     // Точка входу: налаштування журналу Serilog і запуск застосунку.
     [STAThread]
     public static void Main(string[] args)
